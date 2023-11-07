@@ -23,7 +23,6 @@ bookInventory = {
 }
 
 def addBook (ISBN, title, author, price, quantity):
-    if ISBN not in bookInventory:
         bookInventory[ISBN] = {
             "title": title,
             "author": author,
@@ -31,13 +30,11 @@ def addBook (ISBN, title, author, price, quantity):
             "price": price,
             "quantity": quantity
         }
-        return True  
-    return False
+
 
 def removeBook (ISBN):
      if ISBN in bookInventory:
         del bookInventory[ISBN]
-     return
 
 def searchBookByISBN (ISBN):
     if ISBN in bookInventory:
@@ -51,3 +48,7 @@ def seacrhBookByTitleOrAuthor (query):
             matching_books.append(book)
     return matching_books
 
+# to-do
+# testing
+# parnest datu validaciju uz atsevisku funkciju
+# print kad tiek searchots
